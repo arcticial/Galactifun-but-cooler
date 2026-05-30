@@ -17,7 +17,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew shadowJar
       - name: Get version
         id: version
         run: echo "version=$(date +'v%Y.%m.%d-%H%M%S')" >> $GITHUB_OUTPUT
@@ -25,7 +25,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.version.outputs.version }}
-          files: build/libs/*.jar
+          files: build/libs/galactifun.jar
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
