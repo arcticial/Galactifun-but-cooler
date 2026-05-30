@@ -237,7 +237,7 @@ public final class BaseMats {
     );
     public static final SlimefunItemStack FALLEN_METEOR = new SlimefunItemStack(
             "FALLEN_METEOR",
-            Material.ANCIENT_DEBRIS,
+            Material.OBSIDIAN,
             "&4Fallen Meteor",
             "",
             "&7These meteors contain Tungsten"
